@@ -2,6 +2,9 @@
 set nocompatible              " required
 filetype off                  " required
 
+" jump between matching html/xml/jxs tags
+runtime macros/matchit.vim
+
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -22,6 +25,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tomasiser/vim-code-dark'
 Plugin 'sheerun/vim-polyglot'
+Plugin 'chemzqm/vim-jsx-improve' 
 
 " add all your plugins here (note older versions of Vundle
 " used Bundle instead of Plugin)
