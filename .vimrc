@@ -73,3 +73,6 @@ autocmd FileType javascript setlocal ts=2 sts=2 sw=2
 autocmd FileType json setlocal ts=2 sts=2 sw=2
 
 let g:NERDTreeNodeDelimiter = "\u00a0"
+
+" Preven Ctrlp from searching node modules and git
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
