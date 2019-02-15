@@ -26,6 +26,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tomasiser/vim-code-dark'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'chemzqm/vim-jsx-improve' 
+Plugin 'tpope/vim-surround'
 
 " add all your plugins here (note older versions of Vundle
 " used Bundle instead of Plugin)
