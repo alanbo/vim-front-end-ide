@@ -10,6 +10,9 @@ runtime macros/matchit.vim
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+" adds color to commented out code
+hi Comment ctermfg=LightBlue
+
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
@@ -28,6 +31,8 @@ Plugin 'sheerun/vim-polyglot'
 Plugin 'chemzqm/vim-jsx-improve' 
 Plugin 'tpope/vim-surround'
 
+" comments out highlighted code with gcc
+Plugin 'tpope/vim-commentary'
 " add all your plugins here (note older versions of Vundle
 " used Bundle instead of Plugin)
 
