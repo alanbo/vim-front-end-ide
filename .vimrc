@@ -30,6 +30,8 @@ Plugin 'tomasiser/vim-code-dark'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'chemzqm/vim-jsx-improve' 
 Plugin 'tpope/vim-surround'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " comments out highlighted code with gcc
 Plugin 'tpope/vim-commentary'
