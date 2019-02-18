@@ -1,10 +1,12 @@
 " https://realpython.com/vim-and-python-a-match-made-in-heaven/
 set nocompatible              " required
-filetype off                  " required
+
+" set filetypes as typescript.tsx
+autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
+autocmd BufNewFile,BufRead *.ts set filetype=typescript
 
 " jump between matching html/xml/jxs tags
 runtime macros/matchit.vim
-
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -18,6 +20,7 @@ hi Comment ctermfg=LightBlue
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
+
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'vim-syntastic/syntastic'
@@ -33,12 +36,14 @@ Plugin 'tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
+" Typescript support
+Plugin 'Quramy/tsuquyomi'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'HerringtonDarkholme/yats.vim'
+Plugin 'peitalin/vim-jsx-typescript'
+
 " comments out highlighted code with gcc
 Plugin 'tpope/vim-commentary'
-" add all your plugins here (note older versions of Vundle
-" used Bundle instead of Plugin)
-
-" ...
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -55,7 +60,6 @@ set foldlevel=99
 nnoremap <space> za
 
 let python_highlight_all=1
-syntax on
 
 colorscheme codedark
 
@@ -88,3 +92,8 @@ let g:NERDTreeNodeDelimiter = "\u00a0"
 
 " Preven Ctrlp from searching node modules and git
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
+
+syntax on
