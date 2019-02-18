@@ -1,5 +1,7 @@
 " https://realpython.com/vim-and-python-a-match-made-in-heaven/
 set nocompatible              " required
+filetype on
+
 
 " set filetypes as typescript.tsx
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
@@ -39,7 +41,7 @@ Plugin 'vim-airline/vim-airline-themes'
 " Typescript support
 Plugin 'Quramy/tsuquyomi'
 Plugin 'leafgarland/typescript-vim'
-Plugin 'HerringtonDarkholme/yats.vim'
+" Plugin 'HerringtonDarkholme/yats.vim'
 Plugin 'peitalin/vim-jsx-typescript'
 
 " comments out highlighted code with gcc
@@ -92,6 +94,8 @@ let g:NERDTreeNodeDelimiter = "\u00a0"
 
 " Preven Ctrlp from searching node modules and git
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
+let g:polyglot_disabled = ['graphql']
 
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
