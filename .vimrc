@@ -84,9 +84,15 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 autocmd BufWinEnter * NERDTreeMirror
 
 " Sets java script and html indentation to 2 spaces.
-autocmd FileType html setlocal ts=2 sts=2 sw=2
-autocmd FileType javascript setlocal ts=2 sts=2 sw=2
-autocmd FileType json setlocal ts=2 sts=2 sw=2
+" autocmd FileType html setlocal ts=2 sts=2 sw=2
+" autocmd FileType javascript setlocal ts=2 sts=2 sw=2
+" autocmd FileType json setlocal ts=2 sts=2 sw=2
+" autocmd FileType yaml setlocal ts=2 sts=2 sw=2
+
+set shiftwidth=2
+set tabstop=2
+set expandtab
+set softtabstop=2
 
 let g:NERDTreeNodeDelimiter = "\u00a0"
 
